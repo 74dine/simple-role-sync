@@ -1,4 +1,5 @@
 ﻿name: Build Solution
+run-name: ${{ gitea.actor }}
 
 on:
   push:
@@ -9,6 +10,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    container:
+      volumns:
+        - act-toolcache:/opt/hostedtoolcache
 
     strategy:
       matrix:
