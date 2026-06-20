@@ -5,6 +5,7 @@
 
 services:
   server:
+    container_name: simpleprofilesync-server
     image: server
     env_file:
       - path: ./discord_bot.env
