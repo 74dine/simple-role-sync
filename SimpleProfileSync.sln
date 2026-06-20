@@ -5,6 +5,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B4A504FF-51DA-46E7-AC95-3A8C04796913}"
 	ProjectSection(SolutionItems) = preProject
 		compose.yaml = compose.yaml
+		discord_bot.env = discord_bot.env
+		discord_bot.env.sample = discord_bot.env.sample
 	EndProjectSection
 EndProject
 Global
