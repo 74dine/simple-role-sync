@@ -9,6 +9,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    container:
+      volumns:
+        - act-toolcache:/opt/hostedtoolcache
+    env:
+      NUGET_PACKAGES: ${{ github.workspace }}/.nuget/packages
 
     strategy:
       matrix:
@@ -22,7 +27,9 @@ jobs:
       - uses: actions/setup-dotnet@v5
         with:
           dotnet-version: 10.0.X
+          cache: true
+          cache-dependency-path: Server/packages.lock.json
 
-      - run: dotnet restore
+      - run: dotnet restore --locked-mode
 
       - run: dotnet build -c ${{ matrix.configuration }} --no-restore
