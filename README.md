@@ -1,5 +1,7 @@
 ﻿# Simple Role Sync
 
+![Build Status](https://git.mochy.me/74dine/simple-discord-bot/actions/workflows/build-solution.yaml/badge.svg)
+
 A Discord bot that observes user's Discord presence data to automatically update their profile on avatar update.
 
 # Run
@@ -9,10 +11,12 @@ A Discord bot that observes user's Discord presence data to automatically update
 
 ### Steps
 
-- Clone the repository
+- Clone the repository.
 - Rename the sample environment file to `discord_bot.env` (remove `.sample`)
-- Paste your Discord bot token. [Click here to view your Discord applications](https://discord.com/developers/applications)
-  - The environment variable should contain no space characters
+- Paste your Discord bot
+  token.
+  [Click here to view your Discord applications](https://discord.com/developers/applications)
+  - Note: the environment variable should contain no space characters
     ```dotenv
     # Example (invalid token)
     BOT__TOKEN=XXXXXXXXXXXXXXXXXXXXXXXXXX.XXXXXX.XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
