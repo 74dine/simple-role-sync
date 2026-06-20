@@ -23,7 +23,8 @@ jobs:
         with:
           dotnet-version: 10.0.X
           cache: true
+          cache-dependency-path: Server/packages.lock.json
 
-      - run: dotnet restore
+      - run: dotnet restore --locked-mode
 
       - run: dotnet build -c ${{ matrix.configuration }} --no-restore
