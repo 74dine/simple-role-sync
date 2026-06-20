@@ -13,6 +13,8 @@ jobs:
     container:
       volumns:
         - act-toolcache:/opt/hostedtoolcache
+    env:
+      NUGET_PACKAGES: ${{ github.workspace }}/.nuget/packages
 
     strategy:
       matrix:
