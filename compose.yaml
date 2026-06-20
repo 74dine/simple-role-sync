@@ -1,7 +1,15 @@
-﻿services:
+﻿volumes:
+  discord-bot-data:
+    driver: local
+    name: simplediscordserver-bot-data
+
+services:
   server:
     image: server
+    env_file:
+      - path: ./discord_bot.env
+    volumes:
+      - discord-bot-data:/tmp/simpleprofilesync
     build:
       context: .
       dockerfile: Server/Dockerfile
-
